@@ -1,10 +1,11 @@
 import './App.css';
+import { PostList } from './features/post/PostList';
 
 export const App = () => {
   return (
-    <div className="App">
-      Hello
-    </div>
+    <main className="App">
+      <PostList />
+    </main>
   );
 }
 
