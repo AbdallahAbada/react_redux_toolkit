@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { nanoid } from '@reduxjs/toolkit'
 
 import { postAdded } from "./postSlice";
 
@@ -19,11 +18,7 @@ const AddPostForm = () => {
     const onSavePostClicked = () => {
         if (title && content) {
             dispatch(
-                postAdded({
-                    id: nanoid(),
-                    title,
-                    content
-                })
+                postAdded(title, content)
             )
             setTitle('')
             setContent('')
@@ -48,7 +43,8 @@ const AddPostForm = () => {
                 />
                 <label htmlFor="postAuthor">Author:</label>
                 <select id="postAuthor" value={userId} onChange={onAuthorChanged}>
-                    <option value=""></option>
+                    <option value="Abdallah"></option>
+                    <option value="Safii"></option>
                 </select>
                 <label htmlFor="postContent">Content:</label>
                 <textarea
