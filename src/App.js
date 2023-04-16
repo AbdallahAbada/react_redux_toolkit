@@ -1,6 +1,6 @@
 import './App.css';
-import { PostList } from './features/post/PostList';
-import AddPostForm from './features/post/AddPostForm';
+import { PostList } from './features/posts/PostList';
+import AddPostForm from './features/posts/AddPostForm';
 
 export const App = () => {
   return (
